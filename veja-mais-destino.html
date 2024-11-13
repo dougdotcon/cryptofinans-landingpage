@@ -11,6 +11,34 @@
           crossorigin="anonymous">
 
     <title>Crypto Vault - Veja Mais</title>
+    <style>
+      /* Estilos para os ícones */
+      .icon-style {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 20px;
+      }
+      .section-title {
+        margin-bottom: 40px;
+      }
+      .beneficio-card, .nova-secao-card {
+        text-align: center;
+        padding: 20px;
+      }
+      .comparativo-table th, .comparativo-table td {
+        vertical-align: middle;
+        text-align: center;
+      }
+      .moeda-card {
+        text-align: center;
+        padding: 20px;
+      }
+      .moeda-img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 20px;
+      }
+    </style>
   </head>
   <body>
     
@@ -18,7 +46,7 @@
       <div class="container">        
         <a href="index.html" class="navbar-brand font-weight-bold text-dark">Crypto Vault</a>
 
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#nav-principal">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
@@ -28,7 +56,7 @@
             <li class="nav-item"><a href="recursos.html" class="nav-link">Recursos</a></li>
             <li class="nav-item"><a href="beneficios.html" class="nav-link">Benefícios</a></li>
             <li class="nav-item"><a href="preco.html" class="nav-link">Preços</a></li>
-            <li class="nav-item"><a href="entrar.html" class="btn btn-outline-light ml-4">Entrar</a></li>
+            <li class="nav-item"><a href="dashboard.html" class="btn btn-outline-light ml-4">Entrar</a></li>
           </ul>
         </div>
 
@@ -39,9 +67,193 @@
       <div class="container">
         <h2 class="text-center mb-5">Para Onde Vai o Seu Dinheiro</h2>
         <p>Com a Crypto Vault, você tem total transparência sobre onde e como seus investimentos estão sendo alocados. Acompanhe o desempenho de cada criptomoeda, visualize gráficos detalhados e receba relatórios personalizados para entender melhor seus investimentos.</p>
-        <img src="img/juros.png" alt="Gráfico de Investimentos" class="img-fluid mt-4">
+        <div class="text-center">
+          <i class="fas fa-chart-line icon-style"></i>
+        </div>
       </div>
     </section> <!-- Fim Seção Veja Mais -->
+
+    <!-- Nova Seção: Tipos de Criptomoedas Suportadas -->
+    <section class="caixa bg-light"> <!-- Seção Criptomoedas Suportadas -->
+      <div class="container">
+        <h2 class="text-center mb-5">Tipos de Criptomoedas Suportadas</h2>
+        <p>O Crypto Vault suporta uma ampla variedade de criptomoedas, cada uma selecionada por seu potencial de crescimento e estabilidade no mercado. Conheça as principais moedas que você pode gerenciar através da nossa plataforma.</p>
+        <div class="row">
+          <!-- Bitcoin (BTC) -->
+          <div class="col-md-4 moeda-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/bitcoin.svg" alt="Bitcoin" class="moeda-img">
+            <h4 class="mt-3">Bitcoin (BTC)</h4>
+            <p>A primeira e mais conhecida criptomoeda, líder de mercado com alta liquidez e ampla aceitação.</p>
+          </div>
+          <!-- Ethereum (ETH) -->
+          <div class="col-md-4 moeda-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/ethereum.svg" alt="Ethereum" class="moeda-img">
+            <h4 class="mt-3">Ethereum (ETH)</h4>
+            <p>Plataforma de contratos inteligentes que suporta uma vasta gama de aplicações descentralizadas.</p>
+          </div>
+          <!-- Solana (SOL) -->
+          <div class="col-md-4 moeda-card">
+            <img src="./img/solana.png" alt="Solana" class="moeda-img">
+            <h4 class="mt-3">Solana (SOL)</h4>
+            <p>Conhecida por sua alta velocidade e baixo custo de transação, ideal para aplicações descentralizadas.</p>
+          </div>
+          <!-- Dogecoin (DOGE) -->
+          <div class="col-md-4 moeda-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/dogecoin.svg" alt="Dogecoin" class="moeda-img">
+            <h4 class="mt-3">Dogecoin (DOGE)</h4>
+            <p>Criptomoeda com uma comunidade ativa e reconhecida por suas transações rápidas e baixas taxas.</p>
+          </div>
+          <!-- Tether (USDT) -->
+          <div class="col-md-4 moeda-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/tether.svg" alt="Tether" class="moeda-img">
+            <h4 class="mt-3">Tether (USDT)</h4>
+            <p>Stablecoin vinculada ao dólar americano, oferecendo estabilidade e segurança para seus investimentos.</p>
+          </div>
+          <!-- Binance Coin (BNB) -->
+          <div class="col-md-4 moeda-card">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v10/icons/binance.svg" alt="Binance Coin" class="moeda-img">
+            <h4 class="mt-3">Binance Coin (BNB)</h4>
+            <p>Criptomoeda da Binance Exchange, utilizada para reduzir taxas de transação e participar de lançamentos exclusivos.</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Criptomoedas Suportadas -->
+
+    <!-- Nova Seção: Ferramentas de Análise Avançada -->
+    <section class="caixa"> <!-- Seção Ferramentas de Análise -->
+      <div class="container">
+        <h2 class="text-center mb-5">Ferramentas de Análise Avançada</h2>
+        <p>Nossas ferramentas de análise permitem que você monitore e avalie o desempenho dos seus investimentos de maneira detalhada e precisa. Utilize gráficos interativos, indicadores de mercado e previsões para tomar decisões informadas.</p>
+        <div class="row">
+          <div class="col-md-6 text-center mb-4">
+            <i class="fas fa-chart-area icon-style"></i>
+            <h4 class="mt-3">Gráficos Interativos</h4>
+            <p>Visualize o desempenho das suas criptomoedas ao longo do tempo com gráficos dinâmicos e personalizáveis.</p>
+          </div>
+          <div class="col-md-6 text-center mb-4">
+            <i class="fas fa-binoculars icon-style"></i>
+            <h4 class="mt-3">Indicadores de Mercado</h4>
+            <p>Acompanhe indicadores chave que influenciam o mercado de criptomoedas para antecipar tendências e oportunidades.</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Ferramentas de Análise Avançada -->
+
+    <!-- Nova Seção: Estudos de Caso -->
+    <section class="caixa bg-light"> <!-- Seção Estudos de Caso -->
+      <div class="container">
+        <h2 class="text-center mb-5">Estudos de Caso</h2>
+        <p>Conheça histórias de investidores que alcançaram sucesso utilizando o Crypto Vault. Descubra como nossas estratégias e ferramentas contribuíram para maximizar seus retornos.</p>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Caso Ana Paula</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Investidora Iniciante</h6>
+                <p class="card-text">Ana Paula começou com um investimento inicial de R$ 5.000 no plano Lite e, após 12 meses, obteve um retorno de 7%, aumentando seu capital para R$ 5.350.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Caso João Silva</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Trader Intermediário</h6>
+                <p class="card-text">João investiu R$ 50.000 no plano Pro e, com o apoio das ferramentas de análise avançada, conseguiu um retorno de 9% em 24 meses, totalizando R$ 54.500.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Caso Maria Oliveira</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Empresária Avançada</h6>
+                <p class="card-text">Maria utilizou o plano Elite com um investimento de R$ 100.000 e, em 24 meses, obteve um retorno de 12%, elevando seu patrimônio para R$ 112.000.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Caso Carlos Lima</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Analista Financeiro</h6>
+                <p class="card-text">Carlos optou pelo plano Pro e, graças às consultorias especializadas, conseguiu diversificar seu portfólio e alcançar um retorno de 10% ao longo de 24 meses.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Estudos de Caso -->
+
+    <!-- Nova Seção: Metodologia de Investimento -->
+    <section class="caixa"> <!-- Seção Metodologia -->
+      <div class="container">
+        <h2 class="text-center mb-5">Nossa Metodologia de Investimento</h2>
+        <p>A Crypto Vault adota uma abordagem estratégica para investimentos em criptomoedas, combinando análise de mercado, diversificação inteligente e ferramentas avançadas para garantir os melhores retornos possíveis.</p>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-lightbulb icon-style"></i>
+            <h4 class="mt-3">Análise de Mercado</h4>
+            <p>Realizamos uma análise aprofundada das tendências do mercado para identificar as melhores oportunidades de investimento.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-random icon-style"></i>
+            <h4 class="mt-3">Diversificação Inteligente</h4>
+            <p>Distribuímos seus investimentos em múltiplas criptomoedas para minimizar riscos e maximizar retornos.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-cogs icon-style"></i>
+            <h4 class="mt-3">Ferramentas Avançadas</h4>
+            <p>Utilizamos ferramentas de automação e análise para gerenciar e otimizar seu portfólio de forma eficiente.</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Metodologia de Investimento -->
+
+    <!-- Nova Seção: Transparência e Regulamentação -->
+    <section class="caixa bg-light"> <!-- Seção Transparência -->
+      <div class="container">
+        <h2 class="text-center mb-5">Transparência e Regulamentação</h2>
+        <p>A Crypto Vault está comprometida com a transparência total e a conformidade regulatória. Trabalhamos em estreita colaboração com órgãos reguladores para garantir que todos os nossos processos estejam em conformidade com as leis e regulamentos vigentes.</p>
+        <div class="row">
+          <div class="col-md-6 text-center mb-4">
+            <i class="fas fa-balance-scale icon-style"></i>
+            <h4 class="mt-3">Conformidade Regulamentar</h4>
+            <p>Seguimos todas as diretrizes legais para oferecer um serviço seguro e confiável aos nossos usuários.</p>
+          </div>
+          <div class="col-md-6 text-center mb-4">
+            <i class="fas fa-eye icon-style"></i>
+            <h4 class="mt-3">Relatórios Transparentes</h4>
+            <p>Fornecemos relatórios detalhados e acessíveis para que você possa acompanhar o desempenho dos seus investimentos em tempo real.</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Transparência e Regulamentação -->
+
+    <!-- Nova Seção: Benefícios da Transparência para o Usuário -->
+    <section class="caixa"> <!-- Seção Benefícios da Transparência -->
+      <div class="container">
+        <h2 class="text-center mb-5">Benefícios da Transparência</h2>
+        <p>A transparência na alocação de recursos traz inúmeros benefícios para os nossos usuários, incluindo maior controle, confiança e capacidade de tomar decisões informadas.</p>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-user-check icon-style"></i>
+            <h4 class="mt-3">Controle Total</h4>
+            <p>Tenha acesso completo às informações sobre onde e como seu dinheiro está sendo investido.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-lock icon-style"></i>
+            <h4 class="mt-3">Confiança</h4>
+            <p>Saiba que seus investimentos estão sendo gerenciados de forma ética e transparente.</p>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <i class="fas fa-lightbulb icon-style"></i>
+            <h4 class="mt-3">Decisões Informadas</h4>
+            <p>Use os dados e relatórios fornecidos para tomar decisões estratégicas sobre seus investimentos.</p>
+          </div>
+        </div>
+      </div>
+    </section> <!-- Fim Seção Benefícios da Transparência -->
 
     <footer class="mt-4 mb-4"> <!-- Rodapé-->
       <div class="container">
@@ -64,10 +276,10 @@
     </footer>
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
     <!-- FontAwesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" 
-          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
+          integrity="sha384-DyZ88mC6Up2uqS4h/KznZ+C3A6Ykq2LOJ6Zfh7O/o0Fhzh3s5Wn0EbVj8GA7Xc6D" 
           crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
             integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" 
