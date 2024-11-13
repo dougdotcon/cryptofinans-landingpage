@@ -1,48 +1,242 @@
-#home {
-	background: #ffc107;
-	color: white;
+/* Estilos Gerais */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+/* Seção Home */
+#home {
+    background: #ffc107; /* Cor de fundo amarelo */
+    color: white;
+    padding: 60px 0;
+}
+
+#home .form-control {
+    border-radius: 0;
+}
+
+#home .btn-primary {
+    border-radius: 0;
+    background-color: #e0a800; /* Tom ligeiramente mais escuro para o botão */
+    border: none;
+}
+
+#home .btn-primary:hover {
+    background-color: #d39e00;
+}
+
+/* Seção Caixa */
 .caixa {
-	padding: 60px 0;
-	border-bottom: 1px solid #e5e5e5;  
+    padding: 60px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.caixa:last-child {
+    border-bottom: none;
+}
+
+/* Seção Planos */
+section.caixa:nth-of-type(3) { /* Considerando que é a terceira seção caixa */
+    background-color: #f8f9fa;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    background-color: white;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    color: #ffc107;
+    font-weight: bold;
+}
+
+.card-subtitle {
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.card-text {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Seção Diferenciais */
+section.caixa:nth-of-type(4) { /* Considerando que é a quarta seção caixa */
+    background-color: #ffffff;
+}
+
+.caixa img {
+    max-width: 100px;
+}
+
+.caixa h4 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.caixa p {
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
 }
 
 footer p a {
-	margin: 5px 15px;
-	color: black;
-	text-decoration: none;
+    margin: 5px 15px;
+    color: black;
+    text-decoration: none;
 }
 
 footer p a:hover {
-	color: #ffc107;
-} 
-/* Correção mobile */
+    color: #ffc107;
+}
 
+footer .btn-outline-dark {
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+footer .btn-outline-dark:hover {
+    background-color: #ffc107;
+    color: white;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333 !important;
+}
+
+.navbar-nav .nav-link {
+    color: black;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107;
+}
+
+.btn-outline-light {
+    border-radius: 20px;
+}
+
+.response-btn {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .response-btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Responsividade */
+
+/* Tamanho da fonte para .response-width */
 @media (max-width: 576px) { 
-	.response-width {
-		font-size: 2.5em;
-	}
- }
+    .response-width {
+        font-size: 2.5em;
+    }
+}
 
- 
 @media (min-width: 768px) { 
-	.response-width {
-		font-size: 3em;
-	}
- }
-
+    .response-width {
+        font-size: 3em;
+    }
+}
 
 @media (min-width: 992px) { 
-	.response-width {
-		font-size: 3.5em;
-	}
- }
-
+    .response-width {
+        font-size: 3.5em;
+    }
+}
 
 @media (min-width: 1200px) { 
-	.response-width {
-		font-size: 3.5em;
-	}
- }
+    .response-width {
+        font-size: 3.5em;
+    }
+}
 
+/* Ajustes Adicionais */
+
+/* Estilo para os botões principais */
+.btn-primary {
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.btn-primary:hover {
+    background-color: #e0a800;
+}
+
+/* Estilo para os botões de redes sociais no footer */
+footer .btn-outline-dark i {
+    margin-right: 5px;
+}
+
+/* Estilo para os títulos das seções */
+section.caixa h2 {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Ajustes para as imagens responsivas */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Ajustes para os cards na seção de planos */
+section.caixa .card-body {
+    text-align: left;
+}
+
+section.caixa .card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+section.caixa .card-subtitle {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+section.caixa .card-text {
+    font-size: 1em;
+}
+
+/* Ajuste de espaçamento nas seções */
+.caixa .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
