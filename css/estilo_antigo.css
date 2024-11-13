@@ -1,6 +1,4 @@
 /* Remoção do seletor #home, pois não está sendo utilizado */
-/* Caso a página Home seja adicionada futuramente, mantenha este seletor */
-
 /* Seção Home */
 #home {
   background: #ffc107; /* Cor de fundo amarelo */
@@ -250,4 +248,13 @@
   .grafico {
     height: 500px;
   }
+}
+
+/* Estilização da lista de benefícios */
+.list-group-item {
+  font-size: 1.1em;
+}
+
+.list-group-item i {
+  margin-right: 10px;
 }
