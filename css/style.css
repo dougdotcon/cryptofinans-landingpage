@@ -8,6 +8,8 @@
     --glass-bg: rgba(255, 255, 255, 0.1);
     --glass-border: rgba(255, 255, 255, 0.2);
     --card-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+    --gradient-primary: linear-gradient(45deg, var(--primary-color), #FFA500);
+    --gradient-dark: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
 }
 
 /* Estilos Gerais */
@@ -90,6 +92,26 @@ body {
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     border: none;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 1;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--gradient-primary);
+    border-radius: 20px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.feature-card:hover::before {
+    opacity: 0.1;
 }
 
 .feature-card:hover {
@@ -244,4 +266,83 @@ footer a:hover {
     .pricing-card {
         padding: 30px 20px;
     }
+}
+
+/* Animação de Preço */
+@keyframes priceChange {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); color: var(--primary-color); }
+    100% { transform: scale(1); }
+}
+
+.price-changed {
+    animation: priceChange 0.5s ease;
+}
+
+/* Efeito de Brilho */
+@keyframes shine {
+    0% { background-position: -100% 50%; }
+    100% { background-position: 200% 50%; }
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, var(--primary-color) 0%, #FFA500 50%, var(--primary-color) 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s linear infinite;
+}
+
+/* Efeito de Partículas */
+.particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    opacity: 0.3;
+    animation: particleFloat 15s infinite linear;
+}
+
+@keyframes particleFloat {
+    0% { transform: translateY(0) translateX(0); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-100vh) translateX(100vw); opacity: 0; }
+}
+
+/* Efeito de Loading */
+.loading-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 215, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.loading-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 100%;
+    background: var(--gradient-primary);
+    animation: loading 1.5s infinite ease-in-out;
+}
+
+@keyframes loading {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(400%); }
 } 

@@ -49,6 +49,7 @@
         .gradient-text {
             background: linear-gradient(45deg, var(--primary-color), #FFA500);
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -139,12 +140,16 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="particles" id="particles"></div>
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-right">
-                    <span class="badge bg-warning text-dark mb-3">Plataforma #1 em Sinais de Cripto</span>
+                    <div class="badge bg-warning text-dark mb-3 p-2">
+                        <i class="fas fa-star me-2"></i>Plataforma #1 em Sinais de Cripto
+                    </div>
                     <h1 class="display-4 fw-bold mb-4">
                         Sinais de Trading <span class="gradient-text">Precisos e Confiáveis</span>
+                        <div class="loading-bar mt-2"></div>
                     </h1>
                     <p class="lead mb-4">
                         Maximize seus lucros com sinais de trading de alta qualidade e ferramentas avançadas de análise de criptomoedas.
@@ -158,11 +163,11 @@
                         </a>
                     </div>
                     <div class="trusted-by">
-                        <p class="text-muted mb-3">Utilizado por traders de:</p>
+                        <p class="text-light mb-3">Utilizado por traders de todo o mundo</p>
                         <div class="d-flex gap-4 align-items-center">
-                            <img src="img/binance.png" alt="Binance" height="30">
-                            <img src="img/coinbase.png" alt="Coinbase" height="30">
-                            <img src="img/kraken.png" alt="Kraken" height="30">
+                            <span class="text-light">Binance</span>
+                            <span class="text-light">Coinbase</span>
+                            <span class="text-light">Kraken</span>
                         </div>
                     </div>
                     <div class="mt-5">
@@ -198,9 +203,16 @@
                     <div class="hero-mockup floating">
                         <div class="crypto-cards">
                             <div class="crypto-card glass-effect" data-aos="fade-up" data-aos-delay="100">
-                                <i class="fab fa-bitcoin gradient-text"></i>
-                                <span>Bitcoin</span>
-                                <span class="price gradient-text">$45,230</span>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="d-flex align-items-center">
+                                        <i class="fab fa-bitcoin gradient-text fa-2x me-3"></i>
+                                        <span>Bitcoin</span>
+                                    </div>
+                                    <span class="price gradient-text">$45,230</span>
+                                </div>
+                                <div class="progress mt-3" style="height: 4px;">
+                                    <div class="progress-bar bg-warning" role="progressbar" style="width: 75%"></div>
+                                </div>
                             </div>
                             <div class="crypto-card glass-effect" data-aos="fade-up" data-aos-delay="200">
                                 <i class="fab fa-ethereum gradient-text"></i>
@@ -225,13 +237,17 @@
             <div class="row g-4">
                 <div class="col-md-3" data-aos="fade-up">
                     <div class="stat-card">
-                        <h2 class="gradient-text">10K+</h2>
+                        <h2 class="gradient-text">
+                            <span class="counter" data-target="10000">0</span>+
+                        </h2>
                         <p class="mb-0">Usuários Ativos</p>
                     </div>
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
                     <div class="stat-card">
-                        <h2 class="gradient-text">95%</h2>
+                        <h2 class="gradient-text">
+                            <span class="counter" data-target="95">0</span>%
+                        </h2>
                         <p class="mb-0">Precisão dos Sinais</p>
                     </div>
                 </div>
@@ -243,7 +259,9 @@
                 </div>
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-card">
-                        <h2 class="gradient-text">50+</h2>
+                        <h2 class="gradient-text">
+                            <span class="counter" data-target="50">0</span>+
+                        </h2>
                         <p class="mb-0">Criptomoedas</p>
                     </div>
                 </div>
@@ -589,9 +607,28 @@
             duration: 1000,
             once: true
         });
-    </script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
+
+        // Efeito de Partículas
+        function createParticle() {
+            const particles = document.getElementById('particles');
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Posição aleatória
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            
+            particles.appendChild(particle);
+            
+            // Remove a partícula após a animação
+            setTimeout(() => {
+                particle.remove();
+            }, 15000);
+        }
+
+        // Cria partículas periodicamente
+        setInterval(createParticle, 300);
+
         // Simulação de atualização de preços
         setInterval(function() {
             const prices = document.querySelectorAll('.crypto-card .price');
@@ -610,7 +647,42 @@
         function numberWithCommas(x) {
             return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
         }
-    });
+
+        // Contador animado para estatísticas
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+
+        function animateCounter(counter) {
+            const target = +counter.getAttribute('data-target');
+            let count = 0;
+            
+            const updateCount = () => {
+                const increment = target / speed;
+                
+                if (count < target) {
+                    count = Math.ceil(count + increment);
+                    counter.innerText = count;
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
+            
+            updateCount();
+        }
+
+        // Inicia a animação quando o elemento está visível
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const counter = entry.target;
+                    animateCounter(counter);
+                    observer.unobserve(counter);
+                }
+            });
+        });
+
+        counters.forEach(counter => observer.observe(counter));
     </script>
 </body>
 </html> 
