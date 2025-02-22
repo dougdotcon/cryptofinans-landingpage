@@ -1160,4 +1160,52 @@ a:hover ~ .custom-cursor {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #FFA500;
+}
+
+/* Estilos dos Depoimentos */
+.testimonial-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: var(--border-radius);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 215, 0, 0.1);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-strong);
+    border-color: var(--primary-color);
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 215, 0, 0.1);
+    transition: var(--transition-smooth);
+}
+
+.testimonial-card:hover .user-avatar {
+    transform: scale(1.1);
+    background: rgba(255, 215, 0, 0.2);
+}
+
+.testimonial-card:hover .user-avatar i {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.testimonial-card h5 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.testimonial-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.7);
+    font-style: italic;
 } 
