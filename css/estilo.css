@@ -1,242 +1,219 @@
+/* Variáveis de Cores */
+:root {
+  --primary-color: #fcc93f;
+  --secondary-color: #1a1a1a;
+  --text-color: #ffffff;
+  --card-bg: #2a2a2a;
+  --hover-color: #fcc93f;
+}
+
 /* Estilos Gerais */
-
 body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-a:hover {
-    text-decoration: none;
+.animate-in {
+  animation: fadeIn 0.6s ease-out;
 }
 
-/* Seção Home */
-#home {
-    background: #ffc107; /* Cor de fundo amarelo */
-    color: white;
-    padding: 60px 0;
+/* Navbar */
+.navbar {
+  background-color: var(--secondary-color) !important;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 1rem 0;
+  transition: all 0.3s ease;
 }
 
-#home .form-control {
-    border-radius: 0;
+.navbar-brand {
+  font-weight: 700;
+  color: var(--primary-color) !important;
 }
 
-#home .btn-primary {
-    border-radius: 0;
-    background-color: #e0a800; /* Tom ligeiramente mais escuro para o botão */
-    border: none;
+.nav-link {
+  color: var(--text-color) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-#home .btn-primary:hover {
-    background-color: #d39e00;
+.nav-link:hover {
+  color: var(--primary-color) !important;
 }
 
-/* Seção Caixa */
-.caixa {
-    padding: 60px 0;
-    border-bottom: 1px solid #e5e5e5;
+/* Botões */
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.caixa:last-child {
-    border-bottom: none;
+.btn-primary:hover {
+  background-color: var(--hover-color);
+  border-color: var(--hover-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
 }
 
-/* Seção Planos */
-section.caixa:nth-of-type(3) { /* Considerando que é a terceira seção caixa */
-    background-color: #f8f9fa;
+.btn-outline-primary {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
+.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  transform: translateY(-2px);
+}
+
+/* Cards */
 .card {
-    border: none;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    background-color: white;
+  background-color: var(--card-bg);
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(255, 140, 0, 0.15);
 }
 
 .card-title {
-    color: #ffc107;
-    font-weight: bold;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
-.card-subtitle {
-    color: #6c757d;
-    margin-bottom: 15px;
+/* Ícones */
+.icon-style {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s ease;
 }
 
-.card-text {
-    color: #555;
-    margin-bottom: 10px;
+.icon-style:hover {
+  transform: scale(1.1);
 }
 
-/* Seção Diferenciais */
-section.caixa:nth-of-type(4) { /* Considerando que é a quarta seção caixa */
-    background-color: #ffffff;
+/* Seções */
+.caixa {
+  padding: 5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.caixa img {
-    max-width: 100px;
+.section-title {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
 }
 
-.caixa h4 {
-    margin-top: 20px;
-    color: #333;
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--primary-color);
 }
 
-.caixa p {
-    color: #555;
+/* Formulários */
+.form-control {
+  background-color: var(--card-bg);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+  background-color: var(--card-bg);
+  border-color: var(--primary-color);
+  color: var(--text-color);
+  box-shadow: 0 0 0 0.2rem rgba(255, 140, 0, 0.25);
+}
+
+/* Estatísticas */
+.stats-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
 }
 
 /* Footer */
 footer {
-    background-color: #f1f1f1;
-    padding: 20px 0;
+  background-color: var(--secondary-color);
+  padding: 3rem 0;
+  border-top: 2px solid var(--primary-color);
 }
 
-footer p {
-    margin: 0;
+footer a {
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
 
-footer p a {
-    margin: 5px 15px;
-    color: black;
-    text-decoration: none;
+footer a:hover {
+  color: var(--primary-color);
+  text-decoration: none;
 }
 
-footer p a:hover {
-    color: #ffc107;
-}
-
-footer .btn-outline-dark {
-    margin-right: 10px;
-    border-radius: 20px;
-}
-
-footer .btn-outline-dark:hover {
-    background-color: #ffc107;
-    color: white;
-}
-
-/* Navbar */
-.navbar-brand {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #333 !important;
-}
-
-.navbar-nav .nav-link {
-    color: black;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #ffc107;
-}
-
-.btn-outline-light {
-    border-radius: 20px;
-}
-
-.response-btn {
-    margin-left: 10px;
-    margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-    .response-btn {
-        margin-bottom: 10px;
-    }
+.social-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 /* Responsividade */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.5rem 0;
+  }
 
-/* Tamanho da fonte para .response-width */
-@media (max-width: 576px) { 
-    .response-width {
-        font-size: 2.5em;
-    }
+  .caixa {
+    padding: 3rem 0;
+  }
+
+  .btn-lg {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
-@media (min-width: 768px) { 
-    .response-width {
-        font-size: 3em;
-    }
+/* Animações de Hover */
+.hover-scale {
+  transition: transform 0.3s ease;
 }
 
-@media (min-width: 992px) { 
-    .response-width {
-        font-size: 3.5em;
-    }
+.hover-scale:hover {
+  transform: scale(1.05);
 }
 
-@media (min-width: 1200px) { 
-    .response-width {
-        font-size: 3.5em;
-    }
+/* Gradientes e Efeitos */
+.gradient-text {
+  background: linear-gradient(45deg, var(--primary-color), #FFA500);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Ajustes Adicionais */
-
-/* Estilo para os botões principais */
-.btn-primary {
-    background-color: #ffc107;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-.btn-primary:hover {
-    background-color: #e0a800;
-}
-
-/* Estilo para os botões de redes sociais no footer */
-footer .btn-outline-dark i {
-    margin-right: 5px;
-}
-
-/* Estilo para os títulos das seções */
-section.caixa h2 {
-    font-weight: bold;
-    color: #333;
-}
-
-/* Ajustes para as imagens responsivas */
-img.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Ajustes para os cards na seção de planos */
-section.caixa .card-body {
-    text-align: left;
-}
-
-section.caixa .card-title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-section.caixa .card-subtitle {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-}
-
-section.caixa .card-text {
-    font-size: 1em;
-}
-
-/* Ajuste de espaçamento nas seções */
-.caixa .container {
-    max-width: 1200px;
-    margin: 0 auto;
+.glass-effect {
+  background: rgba(42, 42, 42, 0.8);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }

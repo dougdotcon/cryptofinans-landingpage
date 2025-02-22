@@ -4,83 +4,210 @@
     <!-- Meta Tags Obrigatórias -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- CSS Personalizado -->
-    <link rel="stylesheet" type="text/css" href="css/estilo_antigo.css">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
-          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Font Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" type="text/css" href="css/estilo.css">
 
-    <title>Crypto Vault - Gestão de Criptomoedas</title>
+    <title>CryptoSignals - Sinais de Trading em Criptomoedas | Asimov Tech</title>
     <style>
-      /* Estilos para os ícones */
+      :root {
+        --primary-color: #FF8C00;
+        --secondary-color: #1a1a1a;
+      }
+      
+      body {
+        background-color: var(--secondary-color);
+        color: #ffffff;
+      }
+      
+      .navbar {
+        background-color: var(--secondary-color) !important;
+        border-bottom: 2px solid var(--primary-color);
+      }
+
+      .navbar-brand, .nav-link {
+        color: var(--primary-color) !important;
+      }
+
+      .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+      }
+
+      .btn-primary:hover {
+        background-color: #e67e00;
+        border-color: #e67e00;
+      }
+
       .icon-style {
         font-size: 50px;
-        color: #f0ad4e; /* Cor semelhante ao tema de fundo amarelo */
+        color: var(--primary-color);
         margin-bottom: 20px;
       }
+
       .section-title {
+        color: var(--primary-color);
         margin-bottom: 40px;
+      }
+
+      .caixa {
+        padding: 60px 0;
+        border-bottom: 1px solid #333;
+      }
+
+      .card {
+        background-color: #2a2a2a;
+        border: 1px solid var(--primary-color);
+        color: #ffffff;
+      }
+
+      .card-title {
+        color: var(--primary-color);
+      }
+
+      footer {
+        background-color: var(--secondary-color);
+        padding: 20px 0;
+        border-top: 2px solid var(--primary-color);
+      }
+
+      footer a {
+        color: var(--primary-color);
+      }
+
+      footer a:hover {
+        color: #e67e00;
+        text-decoration: none;
       }
     </style>
   </head>
   <body>
     
-    <header class="navbar navbar-expand-sm navbar-light bg-warning">
+    <header class="navbar navbar-expand-sm navbar-dark">
       <div class="container">        
-        <!-- Substituição da imagem da logo pelo texto "Crypto Vault" -->
-        <a href="index.html" class="navbar-brand font-weight-bold text-dark">Crypto Vault</a>
+        <a href="index.html" class="navbar-brand font-weight-bold">
+          <img src="img/logo.png" alt="CryptoSignals" height="30" class="mr-2">
+          CryptoSignals
+        </a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal" aria-controls="nav-principal" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-principal">
           <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="nav-principal">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="recursos.html" class="nav-link">Recursos</a></li>
-            <li class="nav-item"><a href="beneficios.html" class="nav-link">Benefícios</a></li>
-            <li class="nav-item"><a href="preco.html" class="nav-link">Preços</a></li>
-            <li class="nav-item"><a href="dashboard.html" class="btn btn-outline-light ml-4">Entrar</a></li>
+            <li class="nav-item"><a href="sinais.html" class="nav-link">Sinais</a></li>
+            <li class="nav-item"><a href="planos.html" class="nav-link">Planos</a></li>
+            <li class="nav-item"><a href="cryptovault.html" class="nav-link">CryptoVault</a></li>
+            <li class="nav-item"><a href="login.html" class="btn btn-primary ml-4">Entrar</a></li>
           </ul>
         </div>
-
       </div>
-    </header><!-- Fim da barra do topo-->
+    </header>
 
-    <section id="home">
+    <section id="home" class="animate-fade-in">
       <div class="container">
         <div class="row">
           <div class="col-md-6 d-flex">
-            <div class="align-self-center">
-              <!-- Título e parágrafo-->
-              <h1 class="response-width">Gerencie suas Criptomoedas com Segurança</h1>
-              <p>Crypto Vault é uma plataforma de gerenciamento de finanças focada em criptomoedas, oferecendo planos diferenciados para investimento seguro e com potencial de retorno garantido.</p>
-              <!-- Formulário-->
-              <form class="mt-4 mb-4" action="cadastrar.html" method="get">
-                <div class="input-group input-group-lg">
+            <div class="align-self-center animate-slide-left">
+              <h1 class="hero-title">Sinais de Trading em Tempo Real para Criptomoedas</h1>
+              <p class="lead text-light">O CryptoSignals oferece sinais de trading de alta qualidade, análises em tempo real e ferramentas avançadas para maximizar seus lucros no mercado de criptomoedas.</p>
+              <form class="mt-4 mb-4 reveal" action="cadastrar.html" method="get">
+                <div class="input-group input-group-lg glass-effect">
                   <input type="email" placeholder="Seu e-mail" class="form-control" required>
                   <div class="input-group-append">
-                    <button type="submit" class="btn btn-primary">Cadastre-se</button>
+                    <button type="submit" class="btn btn-primary animate-pulse">Começar Grátis</button>
                   </div>
                 </div>
               </form>
 
-              <div>
-                <p>Disponível para:
-                   <a href="#" class="btn btn-outline-light response-btn"><i class="fab fa-apple"></i> IOS</a>
-                   <a href="#" class="btn btn-outline-light response-btn"><i class="fab fa-android"></i> Android</a>
-                </p>
+              <div class="reveal">
+                <p class="text-light">Disponível para:</p>
+                <div class="app-buttons">
+                  <a href="#" class="btn btn-outline-primary hover-lift mx-2"><i class="fab fa-apple"></i> iOS</a>
+                  <a href="#" class="btn btn-outline-primary hover-lift mx-2"><i class="fab fa-android"></i> Android</a>
+                </div>
               </div>
-
             </div>
           </div>
-          <div class="col-md-6 d-none d-md-block">
-            <img src="img/capa-mulher.png" alt="Imagem de Capa" class="img-fluid">
+          <div class="col-md-6 d-none d-md-block animate-slide-right">
+            <img src="img/capa-mulher.png" alt="Trading Criptomoedas" class="img-fluid animate-float">
           </div>
         </div>
       </div>
-    </section> <!--Fim Seção Home-->
+    </section>
+
+    <section class="caixa reveal">
+      <div class="container">
+        <h2 class="text-center section-title gradient-text">Nossos Planos</h2>
+        <div class="row">
+          <!-- Plano Starter -->
+          <div class="col-md-3 reveal" data-delay="200">
+            <div class="card mb-4 hover-glow">
+              <div class="card-body">
+                <h5 class="card-title gradient-text">Starter</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Grátis</h6>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-success"></i> Acesso limitado aos sinais</li>
+                  <li><i class="fas fa-check text-success"></i> Análises básicas</li>
+                  <li><i class="fas fa-check text-success"></i> Notificações padrão</li>
+                </ul>
+                <a href="cadastrar.html" class="btn btn-primary btn-block hover-lift">Começar Grátis</a>
+              </div>
+            </div>
+          </div>
+          <!-- Plano Basic -->
+          <div class="col-md-3 reveal" data-delay="400">
+            <div class="card mb-4 hover-glow">
+              <div class="card-body">
+                <h5 class="card-title gradient-text">Basic</h5>
+                <h6 class="card-subtitle mb-2 text-muted">$10/mês</h6>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-success"></i> Sinais padronizados</li>
+                  <li><i class="fas fa-check text-success"></i> Relatórios mensais</li>
+                  <li><i class="fas fa-check text-success"></i> Suporte por email</li>
+                </ul>
+                <a href="cadastrar.html" class="btn btn-primary btn-block hover-lift">Assinar Basic</a>
+              </div>
+            </div>
+          </div>
+          <!-- Plano Premium -->
+          <div class="col-md-3 reveal" data-delay="600">
+            <div class="card mb-4 hover-glow">
+              <div class="card-body">
+                <h5 class="card-title gradient-text">Premium</h5>
+                <h6 class="card-subtitle mb-2 text-muted">$15/mês</h6>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-success"></i> Sinais premium</li>
+                  <li><i class="fas fa-check text-success"></i> Suporte prioritário</li>
+                  <li><i class="fas fa-check text-success"></i> Análises avançadas</li>
+                </ul>
+                <a href="cadastrar.html" class="btn btn-primary btn-block hover-lift">Assinar Premium</a>
+              </div>
+            </div>
+          </div>
+          <!-- Plano Ultimate -->
+          <div class="col-md-3 reveal" data-delay="800">
+            <div class="card mb-4 hover-glow">
+              <div class="card-body">
+                <h5 class="card-title gradient-text">Ultimate</h5>
+                <h6 class="card-subtitle mb-2 text-muted">$20/mês</h6>
+                <ul class="list-unstyled">
+                  <li><i class="fas fa-check text-success"></i> Sinais exclusivos</li>
+                  <li><i class="fas fa-check text-success"></i> Relatórios detalhados</li>
+                  <li><i class="fas fa-check text-success"></i> Insights personalizados</li>
+                </ul>
+                <a href="cadastrar.html" class="btn btn-primary btn-block hover-lift">Assinar Ultimate</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="caixa"> <!-- Seção saiba mais-->
       <div class="container">
@@ -99,199 +226,200 @@
       </div>
     </section> <!-- Fim Seção saiba mais-->
 
-    <section class="caixa"> <!-- Seção planos-->
+    <section class="caixa">
       <div class="container">
-        <h2 class="text-center mb-5">Nossos Planos</h2>
+        <h2 class="text-center section-title">Recursos Principais</h2>
         <div class="row">
-          <!-- Card Crypto Vault Lite -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Crypto Vault Lite</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Mensalidade: R$ 250</h6>
-                <p class="card-text"><strong>Período de Investimento:</strong> 12 meses</p>
-                <p class="card-text"><strong>Objetivo:</strong> Introdução ao gerenciamento de criptos com valor acessível. Ideal para iniciantes e pequenos investidores.</p>
-                <p class="card-text"><strong>Retorno:</strong> Devolução do valor ao final do período com até 6-8% de lucro potencial.</p>
-                <p class="card-text"><strong>Benefícios Adicionais:</strong> Acesso a relatórios trimestrais de análise do mercado cripto.</p>
-                <a href="cadastrar.html" class="btn btn-primary">Assinar</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card Crypto Vault Pro -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Crypto Vault Pro</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Mensalidade: R$ 3.500</h6>
-                <p class="card-text"><strong>Período de Investimento:</strong> 12 ou 24 meses (cliente escolhe no início do contrato)</p>
-                <p class="card-text"><strong>Objetivo:</strong> Plano intermediário para maximizar ganhos com maior capital inicial.</p>
-                <p class="card-text"><strong>Retorno:</strong> Devolução ao final do período com até 8-10% de lucro potencial.</p>
-                <p class="card-text"><strong>Benefícios Adicionais:</strong> Acesso a relatórios mensais e a um canal de insights de mercado.</p>
-                <a href="cadastrar.html" class="btn btn-primary">Assinar</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card Crypto Vault Elite -->
-          <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <div class="card-body">
-                <h5 class="card-title">Crypto Vault Elite</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Mensalidade: R$ 7.650</h6>
-                <p class="card-text"><strong>Período de Investimento:</strong> 24 meses</p>
-                <p class="card-text"><strong>Objetivo:</strong> Para investidores avançados que buscam segurança e maiores retornos em investimentos de longo prazo.</p>
-                <p class="card-text"><strong>Retorno:</strong> Devolução com até 10% de lucro potencial.</p>
-                <p class="card-text"><strong>Benefícios Adicionais:</strong> Acesso exclusivo a relatórios detalhados, reuniões semestrais de acompanhamento de investimentos e acesso prioritário ao produto "Crypto Signals" quando lançado.</p>
-                <a href="cadastrar.html" class="btn btn-primary">Assinar</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> <!-- Fim Seção planos-->
-
-    <section class="caixa"> <!-- Seção diferenciais-->
-      <div class="container">
-        <h2 class="text-center mb-5">Diferenciais do Crypto Vault</h2>
-        <div class="row">
-          <div class="col-md-4 text-center">
-            <i class="fas fa-shield-alt icon-style"></i>
-            <h4 class="mt-3">Segurança e Gestão Transparente</h4>
-            <p>Relatórios regulares para acompanhamento da performance, garantindo total transparência na gestão dos seus investimentos.</p>
-          </div>
-
-          <div class="col-md-4 text-center">
-            <i class="fas fa-hand-holding-usd icon-style"></i>
-            <h4 class="mt-3">Devolução Garantida</h4>
-            <p>Resgate do valor inicial investido com lucro potencial ao final do período, proporcionando segurança para seu capital.</p>
-          </div>
-
           <div class="col-md-4 text-center">
             <i class="fas fa-chart-line icon-style"></i>
-            <h4 class="mt-3">Foco em Criptomoedas</h4>
-            <p>Acompanhamento e estratégias focadas em maximizar o desempenho no mercado cripto, adaptando-se às tendências e oportunidades.</p>
+            <h4 class="mt-3">Sinais em Tempo Real</h4>
+            <p>Receba sinais de trading precisos e atualizados em tempo real, com análises técnicas detalhadas e recomendações de entrada e saída.</p>
           </div>
-        </div>
-      </div>
-    </section> <!-- Fim Seção diferenciais-->
 
-    <!-- Nova Seção: Como Funciona -->
-    <section class="caixa bg-light"> <!-- Seção como funciona -->
-      <div class="container">
-        <h2 class="text-center mb-5">Como Funciona</h2>
-        <div class="row">
           <div class="col-md-4 text-center">
-            <i class="fas fa-user-plus icon-style"></i>
-            <h4 class="mt-3">Cadastro Fácil</h4>
-            <p>Crie sua conta em minutos e comece a gerenciar suas criptomoedas com poucos cliques.</p>
+            <i class="fas fa-robot icon-style"></i>
+            <h4 class="mt-3">Análise Automatizada</h4>
+            <p>Nossa tecnologia analisa o mercado 24/7, identificando as melhores oportunidades de trading com base em indicadores avançados.</p>
           </div>
+
           <div class="col-md-4 text-center">
-            <i class="fas fa-chart-pie icon-style"></i>
-            <h4 class="mt-3">Análise Personalizada</h4>
-            <p>Receba relatórios detalhados e análises personalizadas para otimizar seus investimentos.</p>
-          </div>
-          <div class="col-md-4 text-center">
-            <i class="fas fa-wallet icon-style"></i>
-            <h4 class="mt-3">Gerenciamento Seguro</h4>
-            <p>Mantenha suas criptomoedas protegidas com nossas soluções de segurança de última geração.</p>
+            <i class="fas fa-bell icon-style"></i>
+            <h4 class="mt-3">Alertas Personalizados</h4>
+            <p>Configure alertas personalizados para preços, tendências e oportunidades específicas que correspondam à sua estratégia de trading.</p>
           </div>
         </div>
       </div>
-    </section> <!-- Fim Seção como funciona -->
+    </section>
+
+    <section class="caixa bg-light">
+      <div class="container">
+        <h2 class="text-center section-title">Por que Escolher o CryptoSignals?</h2>
+        <div class="row">
+          <div class="col-md-3 text-center">
+            <i class="fas fa-clock icon-style"></i>
+            <h4 class="mt-3">Monitoramento 24/7</h4>
+            <p>Análise contínua do mercado para identificar as melhores oportunidades de trading.</p>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <i class="fas fa-percentage icon-style"></i>
+            <h4 class="mt-3">Alta Taxa de Acerto</h4>
+            <p>Sinais verificados com histórico comprovado de sucesso no mercado.</p>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <i class="fas fa-graduation-cap icon-style"></i>
+            <h4 class="mt-3">Material Educativo</h4>
+            <p>Acesso a conteúdo exclusivo para aprimorar suas habilidades de trading.</p>
+          </div>
+
+          <div class="col-md-3 text-center">
+            <i class="fas fa-shield-alt icon-style"></i>
+            <h4 class="mt-3">Integração CryptoVault</h4>
+            <p>Conecte-se com nossa plataforma de gestão profissional de investimentos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="caixa reveal">
+      <div class="container">
+        <h2 class="text-center section-title gradient-text">Estatísticas</h2>
+        <div class="row text-center">
+          <div class="col-md-4 reveal" data-delay="200">
+            <i class="fas fa-users icon-style animate-float"></i>
+            <h3 class="stats-number animate-pulse">10.000+</h3>
+            <p class="lead">Usuários Ativos</p>
+          </div>
+          
+          <div class="col-md-4 reveal" data-delay="400">
+            <i class="fas fa-signal icon-style animate-float"></i>
+            <h3 class="stats-number animate-pulse">85%</h3>
+            <p class="lead">Taxa de Acerto dos Sinais</p>
+          </div>
+
+          <div class="col-md-4 reveal" data-delay="600">
+            <i class="fas fa-chart-bar icon-style animate-float"></i>
+            <h3 class="stats-number animate-pulse">1.000+</h3>
+            <p class="lead">Sinais por Mês</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Nova Seção: Depoimentos de Clientes -->
-    <section class="caixa"> <!-- Seção depoimentos -->
+    <section class="caixa bg-light reveal">
       <div class="container">
-        <h2 class="text-center mb-5">Depoimentos de Clientes</h2>
+        <h2 class="text-center section-title gradient-text">O que Dizem Nossos Traders</h2>
         <div class="row">
-          <!-- Depoimento 1 -->
-          <div class="col-md-6">
-            <div class="card mb-4">
+          <div class="col-md-6 reveal" data-delay="200">
+            <div class="card mb-4 hover-glow">
               <div class="card-body">
-                <p class="card-text">"Desde que comecei a usar o Crypto Vault, meus investimentos em criptomoedas nunca estiveram tão bem gerenciados. A plataforma é intuitiva e o suporte é excepcional."</p>
-                <h5 class="card-title">- Ana Souza</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Investidora</h6>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left icon-style mb-3"></i>
+                  <p class="card-text lead">"Os sinais do CryptoSignals são extremamente precisos. Desde que comecei a usar, minha taxa de acerto aumentou significativamente. O suporte é excelente e as análises são muito detalhadas."</p>
+                  <div class="testimonial-author mt-4">
+                    <img src="img/trader1.jpg" alt="Trader" class="rounded-circle mb-2" width="60">
+                    <h5 class="card-title gradient-text">Ricardo Silva</h5>
+                    <h6 class="card-subtitle">Trader Profissional</h6>
+            </div>
+          </div>
               </div>
             </div>
           </div>
-          <!-- Depoimento 2 -->
-          <div class="col-md-6">
-            <div class="card mb-4">
+          <div class="col-md-6 reveal" data-delay="400">
+            <div class="card mb-4 hover-glow">
               <div class="card-body">
-                <p class="card-text">"O Crypto Vault Pro me proporcionou ferramentas avançadas que realmente fizeram a diferença nos meus retornos. Recomendo para qualquer investidor sério."</p>
-                <h5 class="card-title">- João Pereira</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Trader</h6>
-              </div>
+                <div class="testimonial-quote">
+                  <i class="fas fa-quote-left icon-style mb-3"></i>
+                  <p class="card-text lead">"A integração com o CryptoVault é perfeita. Consigo gerenciar meus investimentos e receber sinais de qualidade em uma única plataforma. Recomendo para todos os níveis de traders."</p>
+                  <div class="testimonial-author mt-4">
+                    <img src="img/trader2.jpg" alt="Trader" class="rounded-circle mb-2" width="60">
+                    <h5 class="card-title gradient-text">Marina Santos</h5>
+                    <h6 class="card-subtitle">Investidora</h6>
             </div>
           </div>
-          <!-- Depoimento 3 -->
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <p class="card-text">"A segurança do Crypto Vault é incomparável. Sinto-me tranquilo sabendo que meus ativos estão protegidos com as melhores tecnologias."</p>
-                <h5 class="card-title">- Maria Oliveira</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Empresária</h6>
-              </div>
-            </div>
-          </div>
-          <!-- Depoimento 4 -->
-          <div class="col-md-6">
-            <div class="card mb-4">
-              <div class="card-body">
-                <p class="card-text">"A interface intuitiva e os relatórios detalhados facilitam muito o acompanhamento dos meus investimentos. O Crypto Vault é uma excelente plataforma."</p>
-                <h5 class="card-title">- Carlos Lima</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Analista Financeiro</h6>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> <!-- Fim Seção depoimentos -->
+    </section>
 
-    <!-- Nova Seção: Parceiros e Integrações -->
-    <section class="caixa bg-light"> <!-- Seção parceiros -->
+    <section class="caixa reveal">
       <div class="container">
-        <h2 class="text-center mb-5">Parceiros e Integrações</h2>
+        <h2 class="text-center section-title gradient-text">Baixe Agora</h2>
         <div class="row text-center">
-          <div class="col-md-3 mb-4">
-            <i class="fas fa-exchange-alt icon-style"></i>
-            <h4 class="mt-3">Binance</h4>
-            <p>Integração com a maior exchange de criptomoedas do mundo, oferecendo maior liquidez e segurança nas suas transações.</p>
+          <div class="col-md-12">
+            <p class="lead mb-4">Comece a receber sinais de trading de alta qualidade gratuitamente</p>
+            <div class="app-buttons d-flex justify-content-center gap-4">
+              <a href="#" class="btn btn-primary btn-lg hover-lift animate-pulse">
+                <i class="fab fa-apple fa-lg mr-2"></i> Download para iOS
+              </a>
+              <a href="#" class="btn btn-primary btn-lg hover-lift animate-pulse">
+                <i class="fab fa-android fa-lg mr-2"></i> Download para Android
+              </a>
           </div>
-          <div class="col-md-3 mb-4">
-            <i class="fas fa-network-wired icon-style"></i>
-            <h4 class="mt-3">Coinbase</h4>
-            <p>Conexão direta com a Coinbase para facilitar a compra, venda e gerenciamento das suas criptomoedas.</p>
-          </div>
-          <div class="col-md-3 mb-4">
-            <i class="fas fa-shield-alt icon-style"></i>
-            <h4 class="mt-3">Norton Security</h4>
-            <p>Parceria com a Norton para garantir proteção avançada e segurança dos seus dados e investimentos.</p>
-          </div>
-          <div class="col-md-3 mb-4">
-            <i class="fas fa-cloud icon-style"></i>
-            <h4 class="mt-3">AWS</h4>
-            <p>Hospedagem na Amazon Web Services, assegurando alta disponibilidade e desempenho da nossa plataforma.</p>
           </div>
         </div>
       </div>
-    </section> <!-- Fim Seção parceiros -->
+    </section>
 
-    <footer class="mt-4 mb-4"> <!-- Rodapé-->
+    <footer class="footer-area glass-effect">
       <div class="container">
         <div class="row">
-          <div class="col-md-8">
-            <p>
-              <a href="index.html">Home</a> |
-              <a href="beneficios.html">Benefícios</a> |
-              <a href="recursos.html">Recursos</a> |
-              <a href="preco.html">Preços</a>
-            </p>
+          <div class="col-md-4 reveal" data-delay="200">
+            <div class="footer-widget">
+              <h5 class="gradient-text">CryptoSignals</h5>
+              <p class="lead">Desenvolvido pela Asimov Tech</p>
+              <p>Sinais de trading em criptomoedas com alta precisão</p>
+              <div class="newsletter-form mt-4">
+                <form action="#" class="glass-effect">
+                  <div class="input-group">
+                    <input type="email" class="form-control" placeholder="Receba nossas novidades">
+                    <div class="input-group-append">
+                      <button class="btn btn-primary hover-lift">
+                        <i class="fas fa-paper-plane"></i>
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
-          <div class="col-md-4">
-<a href="https://www.facebook.com/profile.php?id=61561363030186" class="btn btn-outline-dark"><i class="fab fa-facebook"></i> Facebook</a>
-              <a href="https://x.com/iCryptoVault" class="btn btn-outline-dark"><i class="fab fa-twitter"></i> Twitter</a>
-              <a href="https://www.instagram.com/cryptovaultsignals/" class="btn btn-outline-dark"><i class="fab fa-instagram"></i> Instagram</a>
-          
+          <div class="col-md-4 reveal" data-delay="400">
+            <div class="footer-widget">
+              <h5 class="gradient-text">Links Rápidos</h5>
+              <ul class="list-unstyled footer-links">
+                <li><a href="index.html" class="hover-lift"><i class="fas fa-chevron-right"></i> Home</a></li>
+                <li><a href="sinais.html" class="hover-lift"><i class="fas fa-chevron-right"></i> Sinais</a></li>
+                <li><a href="planos.html" class="hover-lift"><i class="fas fa-chevron-right"></i> Planos</a></li>
+                <li><a href="cryptovault.html" class="hover-lift"><i class="fas fa-chevron-right"></i> CryptoVault</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4 reveal" data-delay="600">
+            <div class="footer-widget">
+              <h5 class="gradient-text">Redes Sociais</h5>
+              <div class="social-buttons">
+                <a href="https://www.facebook.com/profile.php?id=61561363030186" class="btn btn-outline-primary hover-lift">
+                  <i class="fab fa-facebook-f fa-lg"></i> Facebook
+                </a>
+                <a href="https://x.com/iCryptoVault" class="btn btn-outline-primary hover-lift">
+                  <i class="fab fa-twitter fa-lg"></i> Twitter
+                </a>
+                <a href="https://www.instagram.com/cryptovaultsignals/" class="btn btn-outline-primary hover-lift">
+                  <i class="fab fa-instagram fa-lg"></i> Instagram
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-md-12 text-center">
+            <p class="copyright-text">
+              © 2024 CryptoSignals by Asimov Tech. Todos os direitos reservados.
+            </p>
           </div>
         </div>
       </div>
@@ -312,5 +440,29 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" 
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" 
             crossorigin="anonymous"></script>
+
+    <!-- JavaScript para animações -->
+    <script>
+      // Função para revelar elementos durante o scroll
+      function reveal() {
+        var reveals = document.querySelectorAll(".reveal");
+        
+        reveals.forEach(function(reveal) {
+          var windowHeight = window.innerHeight;
+          var elementTop = reveal.getBoundingClientRect().top;
+          var elementVisible = 150;
+          
+          if (elementTop < windowHeight - elementVisible) {
+            reveal.classList.add("active");
+          }
+        });
+      }
+
+      // Adicionar evento de scroll
+      window.addEventListener("scroll", reveal);
+
+      // Ativar para elementos visíveis no carregamento inicial
+      reveal();
+    </script>
   </body>
 </html>
